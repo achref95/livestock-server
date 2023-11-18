@@ -7,7 +7,7 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
-  },
-  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.1"
   }
 }
