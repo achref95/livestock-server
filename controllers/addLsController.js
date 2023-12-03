@@ -9,7 +9,7 @@ const addLs = async (req, res, next) => {
         }
 
         const result = await LiveStock.create({stockNumber, stockType})
-        return res.status(201).json({message: "LS created successfully", LiveStock: result});
+        return res.status(201).json({message: "Live stock created successfully", LiveStock: result});
 
     } catch (error) {
         console.log(error)
