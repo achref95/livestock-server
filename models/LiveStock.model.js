@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const userSchema = new Schema(
   {
     lsNumber: {
-      type: Number,
+      type: String,
       required: [true, "live stock number is required."],
       unique: true,
     },
