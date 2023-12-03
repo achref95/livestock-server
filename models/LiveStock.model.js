@@ -11,7 +11,9 @@ const liveStockSchema = new Schema(
       type: String,
       required: [true, "live stock type is required."],
     },
-
+    comment: {
+      type: String,
+    },
   },
   {
     timestamps: true,
