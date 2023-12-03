@@ -1,14 +1,15 @@
 const { Schema, model } = require("mongoose");
 
-const userSchema = new Schema(
+const liveStockSchema = new Schema(
   {
-    lsNumber: {
+    stockNumber: {
       type: String,
       required: [true, "live stock number is required."],
       unique: true,
     },
-    comment: {
+    stockType: {
       type: String,
+      required: [true, "live stock type is required."],
     },
 
   },
@@ -17,6 +18,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model("User", userSchema);
+const LiveStock = model("LiveStock", liveStockSchema);
 
-module.exports = User;
+module.exports = LiveStock;
