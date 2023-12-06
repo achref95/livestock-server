@@ -16,6 +16,21 @@ const addLs = async (req, res, next) => {
     }
 }
 
+const getLs = async (req, res, next) => {
+    try {
+        const result = await LiveStock.find()
+
+        if (!result || result.length === 0) {
+            return res.status(400).json({message: "No live stock were found in the database"})
+        }
+
+        return res.status(200).json({LiveStock: result})
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 module.exports = {
     addLs,
+    getLs
 }
