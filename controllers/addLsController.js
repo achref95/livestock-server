@@ -32,7 +32,7 @@ const getLs = async (req, res, next) => {
 
 const getOne = async (req, res, next) => {
     try {
-        const { stockNumber } = req.body
+        const { stockNumber } = req.query
 
         if (!stockNumber) {
             return res.status(400).json({ message: "stockNumber not provided." });
